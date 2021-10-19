@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "f76be7e4-08fc-4f25-9253-ff646fb5bf98",
+		"name": "BCP-PRUEBA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CAMBIAR TIPO DE CAMBIO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monto\": 50.5,\r\n    \"monedaOrigen\": \"SOL\",\r\n    \"monedaDestino\": \"SOL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "192.168.1.21:8080/v1/tipo-cambio/cambiar"
+			},
+			"response": []
+		},
+		{
+			"name": "ACTUALIZAR TIPO DE CAMBIO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor\": 5,\r\n    \"monedaOrigen\": \"SOL\",\r\n    \"monedaDestino\": \"SOL\"\r\n}"
+				},
+				"url": "localhost:8080/v1/tipo-cambio/actualizar"
+			},
+			"response": []
+		},
+		{
+			"name": "LISTAR TIPO DE CAMBIO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/v1/tipo-cambio/listar"
+			},
+			"response": []
+		}
+	]
+}
